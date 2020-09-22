@@ -4,6 +4,7 @@ import Home from '@/module/Home'
 import ApiList from '@/module/ApiList'
 import JobList from '@/module/JobList'
 import Log from '@/module/Log'
+import JobTable from '@/module/JobTable'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/log',
       name: 'log',
       component: Log
+    },
+    {
+      path: '/jobTable',
+      name: 'jobTable',
+      component: JobTable
     }
   ]
 })

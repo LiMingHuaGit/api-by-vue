@@ -1,6 +1,6 @@
 <template>
       <el-container>
-        <el-aside ><JobAsider @key="getKey"/></el-aside>
+        <!-- <el-aside ><JobAsider @key="getKey"/></el-aside> -->
         <el-main><JobEidt :JobId="JobId"></JobEidt></el-main>
       </el-container>
 </template>
@@ -24,6 +24,9 @@
       }
     },
     mounted: function() {
+      if (this.$route.params.id) {
+        this.JobId = this.$route.params.id;
+      }
     },
     methods:{
       getKey(key){

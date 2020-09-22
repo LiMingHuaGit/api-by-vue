@@ -7,6 +7,7 @@
             <el-button  icon="el-icon-edit" size="medium" plain @click="editData">编辑信息</el-button>
             <el-button  icon="el-icon-finished" size="medium" plain @click="saveData">保存</el-button>
             <el-button  icon="el-icon-delete" size="medium" plain >删除</el-button>
+            <el-button  icon="el-icon-delete" size="medium" plain @click="goBack">返回</el-button>
           </el-button-group>
       </el-col>
       <el-col :span="12">
@@ -166,6 +167,10 @@
               type: 'success',
               message: '操作成功!'
             });
+            JobApi.refreshJob(this.form.id)
+            .then(res => {
+                console.log(res);
+            })
           })
           .catch(err => {
             console.log(err)
@@ -177,6 +182,25 @@
           });
         });
         this.isdisabledAll = true;
+      },
+      goBack(){
+        // this.$confirm('是否返回列表页?', '提示', {
+        //   confirmButtonText: '是',
+        //   cancelButtonText: '否',
+        //   type: 'warning'
+        // }).then(() => {
+        //   this.$router.push({
+        //     name: "jobTable",
+        //   });
+        // }).catch(() => {
+        //   this.$message({
+        //     type: 'info',
+        //     message: '取消'
+        //   });
+        // });
+        this.$router.push({
+          name: "jobTable",
+        });
       },
 
     }

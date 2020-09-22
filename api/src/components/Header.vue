@@ -14,8 +14,10 @@
       </el-image>
       <el-menu-item index="/" class="header-title">首页</el-menu-item>
       <el-menu-item index="apiList" class="header-title">接口管理</el-menu-item>
-      <el-menu-item index="jobList" class="header-title">定时任务管理</el-menu-item>
+      <!-- <el-menu-item index="jobList" class="header-title">定时任务管理</el-menu-item> -->
+      <el-menu-item index="jobTable" class="header-title">任务表单</el-menu-item>
       <el-menu-item index="log" class="header-title">任务实时日志</el-menu-item>
+      
     </el-menu>
   </div>
 </template>

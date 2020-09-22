@@ -15,6 +15,7 @@ export default {
   getGroupWithJobList(){
       return axios.get(`${host}/job/query/job/jobListByGroup`)
   },
+  //获取所有任务
   getAllJob(){
       return axios.get(`${host}/job/query/all`)
   },
